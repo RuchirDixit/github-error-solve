@@ -132,6 +132,12 @@
       "description": "It happens when you attempt to change the repository origin URL after cloning it from GitHub or another remote repository to your local machine.",
       "solutions": "['Update the existing remote URL, use the set-url command', 'rename the existing remote, run git rename with the remote']"
     },
+     {
+      "type": "push",
+      "title": "Permission denied (Public Key) fatal: Could not read from remote repository",
+      "description": "This error typically occurs when you try to access a Git repository using the SSH protocol, but the authentication with your SSH key fails. This error is usually related to SSH key misconfiguration or access issues.",
+      "solutions": "1) Ensure your SSH key is set up correctly on your local machine. 2) Verify that the SSH agent is running and your key is added to it using ssh-add. 3) Check the remote URL for the Git repository; it should be in SSH format (git@github.com:username/repo.git). 4) Test the SSH connection to GitHub with ssh -T git@github.com. 5) Ensure there are no firewalls or proxies blocking SSH connections. 6) Optionally, you can use the HTTPS protocol if SSH continues to cause problems."
+    },
     {
       "type": "cmd",
       "title": "How to clone specific branch",
